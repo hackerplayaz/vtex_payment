@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/abimaelhernandez/vtex_payment#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.3",
     "react": "^16.5.1",
     "react-dom": "^16.5.1"

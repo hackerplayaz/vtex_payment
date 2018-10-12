@@ -1,0 +1,10 @@
+.allInputs {
+  position: relative;
+  text-align: center;
+  background-color: red;
+
+}
+
+.input {
+padding: inherit;
+}
