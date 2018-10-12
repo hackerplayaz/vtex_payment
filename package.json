@@ -1,0 +1,35 @@
+{
+  "name": "vtex_payment",
+  "version": "1.0.0",
+  "description": "enviroment for invoices",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --config webpack.config.js --watch --mode development",
+    "start-dev": "nodemon server/index.js",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abimaelhernandez/vtex_payment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abimaelhernandez/vtex_payment/issues"
+  },
+  "homepage": "https://github.com/abimaelhernandez/vtex_payment#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^4.20.0",
+    "webpack-cli": "^3.1.1"
+  }
+}
