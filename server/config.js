@@ -1,24 +1,32 @@
 const express = require("express");
-//const querystring = require('querystring');
 const request = require('request');
 
 const app = express();
 
 app.use(express.static(__dirname + "/../client/dist"));
 
-//headers for post to factura.com here
-req.post({
-   url: 'someUrl',
-   form: { email: 'user', razons: '', rfc: '', calle: '', numero_exterior: '', codpos: '', colonia: '', estado:'', ciudad:'' },
-   headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36',
-      'Content-Type' : 'application/x-www-form-urlencoded'
-   },
-   method: 'POST'
-  },
+//headers for post to factura.com
 
-  function (e, r, body) {
-      console.log(body);
-  });
+// Set the headers
+const headers = {
+    'Content-Type': 'application/json',
+    'F-API-KEY': 'JDJ5JDEwJFJvbEFwQjdXNTZXMlJWbUl4MmNlYi5ueG5RNURhZVkvSFladGpZSU5HNk5BM1VVLzBQSkJt',
+    'F-SECRET-KEY': 'JDJ5JDEwJE5tZzN0R3JjVWxPZFJFRVd6SzZBYXV5U0VCcTZ3dGhtd3huOVNjbmFXcmZsVzRBUXBwdkZD'
+}
+// Configure the request
+let options = {
+    url: 'https://factura.com/api/v1/clients/create',
+    method: 'POST',
+    headers: headers
+}
+
+// Start the request
+request(options, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+        // Print out the response body
+        console.log('THIS,IS BODY OF',body)
+    }
+})
+
 //export your app
 module.exports = app;
